@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <title>TOKYO LifeSupport Clinic</title>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer></script>
+    <!-- Google Font読み込み -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!-- Bootstrapの読み込みのlinkタグよりも後ろに、style.cssを読み込むlinkタグを記述する -->
+    <!-- 今回作成する styles.cssの読み込み -->
+    <link href="stylesheet/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- ナビゲーションメニュー開始 -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand my_navbar_brand">
+                <img class="img-fluid navbar_brand_logo" src="images/logo2.png" alt="LSクリニックロゴ"><span>TOKYOライフサポートクリニック</span>
+            </a>
+            <div class="navbar-toggler hamburger_menu" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <input type="checkbox" id="hamburger_btn_check">
+                    <label for="hamburger_btn_check" class="hamburger_btn">
+                        <img class="btn_open" src="images/button_open.png" alt="ナビゲーションバーのボタン">
+                        <img class="btn_close" src="images/button_close.png" alt="ナビゲーションバーのボタン">
+                    </label>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item px-2 dropdown">
+                        <a class="nav-link my_nav_link my-2 dropdown-toggle" aria-current="page" href="#">クリニックについて</a>
+                    </li>
+
+                    <li class="nav-item px-2">
+                        <a class="nav-link my_nav_link my-2" href="#">初めて受診される方へ</a>
+                    </li>
+
+                    <li class="nav-item px-2">
+                        <a class="nav-link my_nav_link my-2" aria-current="page" href="#">診療科目</a>
+                    </li>
+
+                    <li class="nav-item px-2">
+                        <a class="nav-link my_nav_link my-2" aria-current="page" href="#">外来案内</a>
+                    </li>
+
+                    <li class="nav-item px-2">
+                        <a class="nav-link my_nav_link my-2" aria-current="page" href="#">各種ドック</a>
+                    </li>
+
+                    <li class="nav-item px-2">
+                        <a class="nav-link my_nav_link my-2" aria-current="page" href="#">外来予定表</a>
+                    </li>
+
+                    <li class="nav-item px-2">
+                        <a class="nav-link my_nav_link my-2" aria-current="page" href="#">アクセス</a>
+                    </li>
+
+                    <li class="nav-item px-2">
+                        <a class="nav-link my_nav_link my-2" aria-current="page" href="#">お問い合わせ</a>
+                    </li>
+
+                    <li class="nav-item px-2">
+                        <a class="nav-link my_nav_link my-2" aria-current="page" href="#">検索</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ナビゲーションメニュー終了 -->
+
+    <!-- ↓カルーセル開始 -->
+
+    <!-- ↓カルーセル部分 -->
+    <!-- ↓idのmyCarouselはインジケーター部分のdata-bs-targetと紐づける必要がある。mb-5でbottom方向に余白を追加。 -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- ↓インジケーター部分 -->
+        <ol class="carousel-indicators">
+            <!-- ↓この箇所と前述のidのmyCarouselは紐づいている。data-bs-slide-toの番号がカルーセルの順番になる -->
+            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+        </ol>
+
+        <!-- ↓carousel-inner : カルーセルのキャプションと背景画像の部分。 -->
+        <div class="carousel-inner">
+            <!-- ↓1枚目のカルーセル -->
+            <div class="carousel-item active">
+                <img src="images/top1.png" alt="第1スライド画像">
+                <div class="carousel-caption">
+                    <!-- ↓style.cssで使う独自クラスはアンダーバーで記載。位置とフォントを変更 -->
+                    <h1 class="my_carousel_caption">
+                        高度な医療設備と技術<br>
+                        ホテルのような癒しの空間
+                    </h1>
+                </div>
+            </div>
+            <!-- ↓2枚目のカルーセル -->
+            <div class="carousel-item">
+                <img src="images/top2.png" alt="第2スライド画像">
+                <div class="carousel-caption">
+                    <!-- ↓style.cssで使う独自クラスはアンダーバーで記載。位置とフォントを変更 -->
+                    <h1 class="my_carousel_caption">
+                        知恵と医療で世界を癒す
+                    </h1>
+                </div>
+            </div>
+            <!-- ↓3枚目のカルーセル -->
+            <div class="carousel-item">
+                <img src="images/top3.png" alt="第3スライド画像">
+                <div class="carousel-caption">
+                    <!-- ↓style.cssで使う独自クラスはアンダーバーで記載。位置とフォントを変更 -->
+                    <h1 class="my_carousel_caption">
+                        よりよい医療をより安く<br>
+                        日本の医療を輸出産業に育てる
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ↓左側のコントロールボタン -->
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">previous</span>
+    </a>
+
+    <!-- ↓右側のコントロールボタン -->
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+    <!-- カルーセル部分終了 -->
+
+    <!-- ↓重要なお知らせ部分開始 -->
+    <section id="important_information">
+
+        <!-- コンテンツの中央揃え。上下方向にpadding 5、下方向にmargin 5 -->
+        <div class="container py-5">
+
+            <div class="information px-3 py-3 text-center">
+                <a href="#">※11月22日追記【2022年度インフルエンザワクチンご予約】</a>
+            </div>
+
+            <div class="information px-3 py-3 text-center">
+                <a href="#">NEW!! 【重要・事前要TEL】発熱外来について</a>
+            </div>
+
+            <div class="information px-3 py-3 text-center">
+                <a href="#">休診情報</a>
+            </div>
+        </div>
+    </section>
+    <!-- 重要なお知らせ部分終了 -->
+
+    <!-- ↓各種案内の部分開始 -->
+    <section id="regular_information">
+
+        <div class="container pb-5 mb-5">
+
+            <div class="row">
+                <!-- 左側のカラム（4/12分割） -->
+                <div class="col-lg-4 text-center">
+
+                    <div class="py=3">
+
+                        <h5 class="pt-5">
+                            <a href="#">外来案内</a>
+                        </h5>
+
+                        <a href="#"><img src="images/opd.png" alt="外来案内"></a>
+                    </div>
+                </div>
+
+                <!-- 中央のカラム（4/12分割） -->
+                <div class="col-lg-4 text-center">
+
+                    <div class="py=3">
+
+                        <h5 class="pt-5">
+                            <a href="#">各種健診</a>
+                        </h5>
+
+                        <a href="#"><img src="images/health-checkup.png" alt="各種健診"></a>
+                    </div>
+                </div>
+
+                <!-- 右側のカラム（4/12分割） -->
+                <div class="col-lg-4 text-center">
+
+                    <div class="py=3">
+
+                        <h5 class="pt-5">
+                            <a href="#">予防接種</a>
+                        </h5>
+
+                        <a href="#"><img src="images/vactination.png" alt="予防接種"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

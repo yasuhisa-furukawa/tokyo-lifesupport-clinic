@@ -1,0 +1,345 @@
+/* ----------------------------------------------- 共通 */
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  color: #FEEEE8;
+  font-family: 'Noto Sans JP', sans-serif;
+  padding-bottom: 0;
+  background-color: #34271C;
+
+}
+
+p {
+  line-height: 2.0em;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 14px;
+
+}
+
+
+/* ----------------------------------------------- ナビゲーションバー */
+.navbar_brand_logo {
+
+    /* サイズを32×32の正方形へ変更 */
+    width: 40px;
+    height: 32px;
+
+    /* imgはインライン要素なのでインラインブロックに設定 */
+    display: inline-block;
+
+    /* ロゴと文字との間に空白を設定 */
+    margin-right: 15px;
+
+}
+
+/* カンマで区切ることで複数のクラスを設定できる！！ */
+.my_navbar_brand,
+.my_nav_link {
+
+    /* フォントサイズを設定 */
+    font-size: 12px;
+
+    /* フォントをserif体に設定 */
+    font-family: 'Lora', serif;
+
+    /* フォント色を黒に設定 */
+    /* !importantでスタイルの上書を防止する。下に記述されたスタイルが優先されるCSSのルールを無視できる。 */
+    color: #FEEEE8 !important;
+}
+
+/* Bootstrapのボタンに初期設定されている周囲のborder（枠線）を消す */
+.navbar-toggler {
+    padding: 0 !important;
+    border: none;
+}
+
+/* ハンバーガーボタンがチェック状態である(押されている)とき、閉じるボタン(×)を表示する*/
+#hamburger_btn_check:checked~.hamburger_btn .btn_close {
+    display: block;
+}
+
+/* ハンバーガーボタンがチェック状態である（押されている）とき、ハンバーガーボタンを表示しない */
+#hamburger_btn_check:checked~.hamburger_btn .btn_open {
+    display: none;
+}
+
+/* 最初に表示したときは、閉じるボタン(×)を表示しない */
+.btn_close {
+    display: none;
+}
+
+/* ハンバーガーボタンが押されているかを判断するためのチェックボックスは隠す */
+#hamburger_btn_check {
+    display: none;
+}
+
+
+
+
+/* ----------------------------------------------- カルーセル */
+.my_carousel_caption {
+    font-size: 38px;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    font-family: 'Lora', serif;
+    line-height: 1.5em;
+}
+
+/* 疑似要素でアイコンを配置。前に配置している。 */
+.my_carousel_caption::before {
+    content: url(../images/logoSymbol_White.png);
+    display: block;
+}
+
+/* スマホ画面幅（最大375pxまで）の場合、以下のスタイルを適用 */
+@media screen and (max-width:376px) {
+    .my_carousel_caption {
+
+        /* フォントサイズを27pxにする */
+        font-size: 16px;
+    }
+}
+
+/* ナビゲーションメニューのcontainerにスタイルを修飾 */
+/* .container {
+margin: 0 5px;
+} */
+/* ↑他のcontainerクラスに影響を及ぼしてしまったので無効化した */
+
+/* carousel-itemの高さを32remに指定 */
+.carousel-item {
+height: 32rem;
+}
+
+/* carousel-itemr直下のimgタグに設定 */
+.carousel-item>img {
+
+/* 絶対位置を指定 */
+position: absolute;
+top: 0;
+left: 0;
+min-width: 100%;
+
+/* 高さはcarousel-itemにそろえる */
+height: 100%;
+
+}
+
+
+/* ----------------------------------------------- 重要なお知らせ */
+
+.information {
+    background-color: #fa6f3c;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.information:after {
+    content: "\e906";
+    vertical-align: middle;
+    font-family: "icomoon";
+    margin-right: 5px;
+    color: #fff;
+}
+
+
+
+/* ----------------------------------------------- 各種案内 */
+
+#regular_information {
+    background-color: #F0E8D9;
+    color: #000000 !important;
+    font-size: 16px;
+}
+
+
+
+/* ----------------------------------------------- ギャラリー */
+
+.gallery::after {
+    content: "ギャラリー";
+    margin: 0 auto 0;
+}
+
+
+
+/* ----------------------------------------------- メニュー */
+
+.menu::after {
+    content: "メニュー";
+    margin: 0 auto 0;
+}
+
+.menu_title {
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.menu_price {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Lora', serif;
+}
+
+
+
+/* ----------------------------------------------- レビュー */
+/* 背景画像を設定 */
+.review_wrapper {
+    background-image: url(../img/background-reviews.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* サブタイトルを疑似要素で表示 */
+.review::after {
+    content: "お客様の声";
+    margin: 0 auto 0;
+    border-bottom: solid 1px #ffffff;
+}
+
+/* 白い背景色の高さを固定 */
+.h_420 {
+    height: 420px;
+    position: relative;
+}
+
+/* レビューの画像を修正 */
+.reviewer_img {
+    /* サイズを48pxに設定 */
+    width: 48px;
+    height: 48px;
+
+/* 円形にします */
+border-radius: 50%;
+margin-right: 16px;
+}
+
+/* 星のアイコン画像 */
+.star_img {
+    /* サイズを25pxにします */
+    width: 25px;
+    height: 25px;
+}
+
+/* 詳細ボタンを株に固定 */
+.fix_tottom {
+    /* positionプロパティで絶対配置 */
+    position: absolute;
+    /* ボタンのサイズ変更 */
+    width: 80px;
+    height: 44px;
+    /* 左から24px、下から24pxの位置に配置 */
+    left: 24px;
+    bottom: 24px;
+}
+
+
+
+
+
+/* ----------------------------------------------- アクセス */
+.access::after {
+    content: "アクセス";
+    margin: 0 auto 0;
+}
+
+
+
+
+/* ----------------------------------------------- フッター */
+
+#footer {
+    background-color: #FAFAFA;
+}
+
+/* position: absoluteで下からの距離で固定 */
+.copy_right {
+    font-size: 14px;
+
+    /* 先祖要素のdivタグの左下の角を基準に絶対配置します */
+    position: absolute;
+
+        /* 下から1rem 左から12px */
+        bottom: 1rem;
+        left: 12px;
+        display: flex;
+    }
+
+    /* copy_rightのクラスを適用したdivタグの子要素のpタグに適用される */
+    
+.copy_right>p {
+    margin-right: 5rem;
+    margin-bottom: 0;
+}
+
+/* copy_rightのクラスを適用したdivタグの子要素で、sns_imgクラスを適用しているimgタグに適用される */
+.copy_right>img.sns_img {
+        
+    /* SNSアイコンのサイズ24px */
+    height: 24px;
+    width: 24px;
+
+    /* 右方向へ余白10x */
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+/* restaurant_info直下の子要素pタグすべてに適用される */
+.restaurant_info p {
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* restaurant_info直下の子要素imgタグすべてに適用される */
+.restaurant_info img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    line-height: 1.5;
+    margin-top: auto;
+}
+
+/* サイトアイコンを64pxに設定 */
+.footer_brand_logo {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    /* 右側余白15px */
+    margin-right: 15px;
+}
+
+/* サイトタイトルのフォントをserf体（明朝体）に設定 */
+.footer_text {
+    font-size: 24px;
+    font-family: 'Lora', serif;
+    text-decoration: center;
+}
+
+/* スマートフォン画面幅（最大991pxまで）でスタイルを適用 */
+@media screen and (max-width: 991px) {
+    .footer_text,
+    .copy_right {
+        margin-top: 2rem;
+        text-align: center;
+        position: relative;
+    }
+
+    .copy_right>p,img {
+        margin-right: 1rem;
+        font-size: 14px;
+        margin: 0;
+        line-height: 35px;
+    }
+}
+
+
