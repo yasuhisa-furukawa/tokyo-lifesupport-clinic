@@ -137,12 +137,17 @@ height: 100%;
 .information {
     background-color: #fa6f3c;
     font-size: 24px;
+    /* color: #fff; */
+    /* text-decoration: none; */
+}
+
+.information a {
     color: #fff;
     text-decoration: none;
 }
 
 .information:after {
-    content: "\e906";
+    content: "\ea42";
     vertical-align: middle;
     font-family: "icomoon";
     margin-right: 5px;
@@ -161,16 +166,17 @@ height: 100%;
 
 
 
-/* ----------------------------------------------- ギャラリー */
+/* ----------------------------------------------- クリニックの「医療」の説明 */
 
-.gallery::after {
-    content: "ギャラリー";
-    margin: 0 auto 0;
+#explanation {
+    background-image: url(../images/explanation-background.png);
 }
 
+#explanation p {
+    font-size: 16px;
+    color: #34271C;
+}
 
-
-/* ----------------------------------------------- メニュー */
 
 .menu::after {
     content: "メニュー";
@@ -187,6 +193,25 @@ height: 100%;
     font-size: 20px;
     font-weight: 400;
     font-family: 'Lora', serif;
+}
+
+.btn-warning {
+    padding: 14px 24px;
+    background: #fa6f3c;
+}
+
+.btn_details:after {
+    content: "\ea42";
+    vertical-align: middle;
+    font-family: "icomoon";
+    margin-right: 5px;
+    color: #fff;
+    padding-left: 10px;
+    font-size: 24px;
+}
+
+.explanation_background {
+    background: #ffffff;
 }
 
 

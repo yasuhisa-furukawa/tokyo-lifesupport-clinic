@@ -15,6 +15,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
         integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- IcoMoonのcssの読み込み -->
+    <link href="icon/style.css" rel="stylesheet">
 
     <!-- Bootstrapの読み込みのlinkタグよりも後ろに、style.cssを読み込むlinkタグを記述する -->
     <!-- 今回作成する styles.cssの読み込み -->
@@ -81,7 +83,7 @@
 
     <!-- ↓カルーセル部分 -->
     <!-- ↓idのmyCarouselはインジケーター部分のdata-bs-targetと紐づける必要がある。mb-5でbottom方向に余白を追加。 -->
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
         <!-- ↓インジケーター部分 -->
         <ol class="carousel-indicators">
@@ -165,13 +167,13 @@
     <!-- ↓各種案内の部分開始 -->
     <section id="regular_information">
 
-        <div class="container pb-5 mb-5">
+        <div class="container pb-5">
 
-            <div class="row">
+            <div class="row justify-content-center">
                 <!-- 左側のカラム（4/12分割） -->
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-3 text-center">
 
-                    <div class="py=3">
+                    <div>
 
                         <h5 class="pt-5">
                             <a href="#">外来案内</a>
@@ -182,9 +184,9 @@
                 </div>
 
                 <!-- 中央のカラム（4/12分割） -->
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-3 text-center">
 
-                    <div class="py=3">
+                    <div>
 
                         <h5 class="pt-5">
                             <a href="#">各種健診</a>
@@ -195,9 +197,9 @@
                 </div>
 
                 <!-- 右側のカラム（4/12分割） -->
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-3 text-center">
 
-                    <div class="py=3">
+                    <div>
 
                         <h5 class="pt-5">
                             <a href="#">予防接種</a>
@@ -209,5 +211,147 @@
             </div>
         </div>
     </section>
+
+    <!-- 東京ライフサポートクリニックの医療の説明セクション -->
+    <section id="explanation">
+        <!-- タイトルの文字部分のコンテナ -->
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <!-- タイトル文字 -->
+                    <h2 class="section_title text-center">東京ライフサポートクリニックの「医療」について</h2>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- コンテンツ部分のコンテナ -->
+        <div class="container mb-5 py-4">
+            <div class="row justify-content-center">
+
+                <!-- 左側コンテンツ -->
+                <div class="col-lg-5">
+
+                    <!-- さらに子要素を5:7で分割 -->
+                    <div class="row g-0 mb-4">
+                        <div class="col-lg-5 text-center">
+
+                            <!-- 左側メニュー画像部分 -->
+                            <img src="images/mainhole.png" class="img-fluid" alt="メインホール">
+                        </div>
+                        <!-- 右側テキスト部分 -->
+                        <div class="col-lg-7 p-4 explanation_background">
+                            <p clss="my-auto">八王子駅から徒歩1分。15の診療科を持つクリニック</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側コンテンツ -->
+                <div class="col-lg-5">
+
+                    <!-- さらに子要素を5:7で分割 -->
+                    <div class="row g-0 mb-4">
+                        <div class="col-lg-5 text-center">
+
+                            <!-- 左側メニュー画像部分 -->
+                            <img src="images/equipment.png" class="img-fluid" alt="医療装置">
+                        </div>
+                        <!-- 右側テキスト部分 -->
+                        <div class="col-lg-7 p-4 explanation_background">
+                            <p class="my-auto">急性期病院並みの医療機器で即時検査・即日診断</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 左側コンテンツ -->
+                <div class="col-lg-5">
+
+                    <!-- さらに子要素を5:7で分割 -->
+                    <div class="row g-0 mb-4">
+                        <div class="col-lg-5 text-center">
+
+                            <!-- 左側メニュー画像部分 -->
+                            <img src="images/vactine.png" class="img-fluid" alt="予防接種">
+                        </div>
+                        <!-- 右側テキスト部分 -->
+                        <div class="col-lg-7 p-4 explanation_background">
+                            <p class="my-auto">各種健診・予防接種もご利用いただけます</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側コンテンツ -->
+                <div class="col-lg-5">
+
+                    <!-- さらに子要素を5:7で分割 -->
+                    <div class="row g-0 mb-4">
+                        <div class="col-lg-5 text-center">
+
+                            <!-- 左側メニュー画像部分 -->
+                            <img src="images/emergency-car.png" class="img-fluid" alt="救急サービス">
+                        </div>
+                        <!-- 右側テキスト部分 -->
+                        <div class="col-lg-7 p-4 explanation_background">
+                            <p class="my-auto">グループ内救急病院と連携し、万一の時も安心</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 左側コンテンツ -->
+                <div class="col-lg-5">
+
+                    <!-- さらに子要素を5:7で分割 -->
+                    <div class="row g-0 mb-4">
+                        <div class="col-lg-5 text-center">
+
+                            <!-- 左側メニュー画像部分 -->
+                            <img src="images/checkup.png" class="img-fluid" alt="人間ドック設備">
+                        </div>
+                        <!-- 右側テキスト部分 -->
+                        <div class="col-lg-7 p-4 explanation_background">
+                            <p class="my-auto">ワンコインドック・ベーシック脳ドックなど多彩なドックをご用意</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側コンテンツ -->
+                <div class="col-lg-5">
+
+                    <!-- さらに子要素を5:7で分割 -->
+                    <div class="row g-0 mb-4">
+                        <div class="col-lg-5 text-center">
+
+                            <!-- 左側メニュー画像部分 -->
+                            <img src="images/online-consultation.png" class="img-fluid" alt="オンライン診療">
+                        </div>
+                        <!-- 右側テキスト部分 -->
+                        <div class="col-lg-7 p-4 explanation_background">
+                            <p class="my-auto">自宅に居ながら診察が受けられるオンライン診療</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ボタン部分のコンテナ -->
+        <div class="container">
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-warning btn_details" type="button">詳細はこちら</button>
+              </div>
+        </div>
+    </section>
+
+    <!-- ニュース部分のセクション -->
+    <section id="news">
+        <div class="container justify-content-center">
+            <!-- タイトル文字 -->
+            <h2 class="section_title text-center py-4">ニュース</h2>
+        </div>
+
+    </section>
+
 </body>
 </html>
