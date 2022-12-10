@@ -177,6 +177,10 @@ height: 100%;
     color: #34271C;
 }
 
+.section_title {
+    color: #000000;
+}
+
 
 .menu::after {
     content: "メニュー";
@@ -212,6 +216,17 @@ height: 100%;
 
 .explanation_background {
     background: #ffffff;
+}
+
+
+/* ----------------------------------------------- ニュース */
+#news {
+    background-color: #ffffff;
+}
+
+#news p {
+    color: #000000;
+    font-size: 16px;
 }
 
 
